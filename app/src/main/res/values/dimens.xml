@@ -1,0 +1,20 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="tiny_margin">4dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="mid_margin">12dp</dimen>
+    <dimen name="large_margin">16dp</dimen>
+    <dimen name="large_2x_margin">32dp</dimen>
+    <dimen name="large_8x_margin">128dp</dimen>
+
+    <dimen name="card_corner_radius">4dp</dimen>
+
+    <!-- Different text sizes -->
+    <dimen name="regular_text_size">16sp</dimen>
+    <dimen name="regular_plus_text_size">18sp</dimen>
+    <dimen name="large_text_size">20sp</dimen>
+    <dimen name="largest_text_size">26sp</dimen>
+
+    <!-- Different thumb sizes -->
+    <dimen name="large_thumb">80dp</dimen>
+</resources>

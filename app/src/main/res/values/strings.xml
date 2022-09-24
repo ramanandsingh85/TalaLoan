@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TalaLoan</string>
+    <string name="invite_friends_earn_money">Invite friends, earn money!</string>
+    <string name="view_faqs_or_send_message">View FAQs or send us a message</string>
+    <string name="my_tala_status">My Tala Status</string>
+    <string name="tala_status_new">Track your progress over time</string>
+    <string name="tala_status_next_limit">Grow your limit up to %s %d</string>
+    <string name="view_status">VIEW STATUS</string>
+    <string name="loan_status_new">Apply for a loan</string>
+    <string name="loan_status_new_message">Replay on time to get loans up to <b>%s %d</b>.</string>
+    <string name="loan_status_due_message">Qualify for a loans up to %s %d over time.</string>
+    <string name="loan_status_approved">Your application is approved!</string>
+    <string name="loan_status_approved_message">You\'ve been approved for %s %d.</string>
+    <string name="loan_status_paid">Your loan is fully paid</string>
+    <string name="loan_status_paid_message">Apply for another loan any time you want and grow your limit.</string>
+    <string name="loan_status_on_track">You are on track!</string>
+    <string name="loan_status_due">is due tomorrow</string>
+    <string name="read_more">READ MORE</string>
+    <string name="tala_helped_message">\"Tala helped me with my dream\"</string>
+    <string name="apply_now">APPLY NOW</string>
+    <string name="view_loan_offer">VIEW LOAN OFFER</string>
+    <string name="make_a_payment">MAKE A PAYMENT</string>
+    <string name="how_to_repay">HOW TO REPAY</string>
+    <string name="next">NEXT</string>
+</resources>

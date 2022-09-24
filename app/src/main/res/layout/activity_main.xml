@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.MainActivity"
+    android:background="@color/grey">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:navigationIcon="@drawable/tala_circle_bright"
+            app:titleTextColor="@color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="?android:attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/small_margin">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/loan_no_due_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/loan_status_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/img_loan_status_apply"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/large_margin"/>
+
+                    <TextView
+                        android:id="@+id/loan_status_tv"
+                        style="@style/BlackTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_status_new"
+                        android:paddingHorizontal="@dimen/large_margin"
+                        android:layout_marginTop="@dimen/large_margin"/>
+
+                    <TextView
+                        android:id="@+id/loan_message_tv"
+                        style="@style/BlackRegularText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_status_new_message"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:paddingHorizontal="@dimen/large_margin"
+                        android:layout_below="@id/status_label_tv"/>
+
+                    <Button
+                        android:id="@+id/apply_now_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/progress_label_tv"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/large_margin"
+                        android:layout_marginBottom="@dimen/large_margin"
+                        android:text="@string/apply_now"
+                        android:backgroundTint="@color/orange"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/loan_due_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/on_track_tv"
+                        style="@style/BlackRegularText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_status_on_track"
+                        android:layout_marginTop="@dimen/large_margin"
+                        android:paddingHorizontal="@dimen/large_margin"/>
+
+                    <TextView
+                        android:id="@+id/due_amount_tv"
+                        style="@style/GreenTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Php 740"
+                        android:paddingHorizontal="@dimen/large_margin"
+                        android:layout_marginTop="@dimen/tiny_margin"
+                        android:layout_below="@id/on_track_tv"/>
+
+                    <TextView
+                        android:id="@+id/due_date_tv"
+                        style="@style/GreyRegularPlusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/due_amount_tv"
+                        android:layout_marginTop="@dimen/tiny_margin"
+                        android:paddingHorizontal="@dimen/large_margin"
+                        android:text="@string/loan_status_due" />
+
+                    <Button
+                        android:id="@+id/make_payment_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/due_date_tv"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_marginLeft="@dimen/large_margin"
+                        android:layout_marginBottom="@dimen/large_margin"
+                        android:text="@string/make_a_payment"
+                        android:backgroundTint="@color/orange"/>
+
+                    <TextView
+                        android:id="@+id/how_to_repay_tv"
+                        style="@style/BlackRegularText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/due_date_tv"
+                        android:layout_toRightOf="@id/make_payment_btn"
+                        android:background="?attr/selectableItemBackground"
+                        android:paddingHorizontal="@dimen/large_margin"
+                        android:paddingVertical="@dimen/large_margin"
+                        android:text="@string/how_to_repay" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/small_margin"
+                    android:paddingVertical="@dimen/large_margin">
+
+                    <TextView
+                        android:id="@+id/status_label_tv"
+                        style="@style/BlackTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/large_margin"
+                        android:text="@string/my_tala_status" />
+
+                    <TextView
+                        android:id="@+id/progress_label_tv"
+                        style="@style/BlackRegularText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tala_status_new"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:paddingHorizontal="@dimen/large_margin"
+                        android:layout_below="@id/status_label_tv"/>
+
+                    <TextView
+                        android:id="@+id/view_status_tv"
+                        style="@style/OrangeRegularText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/progress_label_tv"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:background="?attr/selectableItemBackground"
+                        android:paddingHorizontal="@dimen/large_margin"
+                        android:paddingVertical="@dimen/small_margin"
+                        android:text="@string/view_status"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/badge_status_iv"
+                        android:layout_width="@dimen/large_thumb"
+                        android:layout_height="@dimen/large_thumb"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/my_tala_status"
+                        android:src="@drawable/img_blue_badge_large" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/story_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:contentDescription="@string/my_tala_status"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_story_card_ke" />
+
+                    <TextView
+                        android:id="@+id/story_tv"
+                        style="@style/WhiteLargeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/large_margin"
+                        android:paddingTop="@dimen/large_margin"
+                        android:text="@string/tala_helped_message" />
+
+                    <TextView
+                        android:id="@+id/read_more_tv"
+                        style="@style/WhiteRegularText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/read_more"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_below="@id/story_tv"
+                        android:padding="@dimen/large_margin" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <TextView
+                    android:id="@+id/invite_tv"
+                    style="@style/BlackRegularText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/invite_friends_earn_money"
+                    android:drawableLeft="@drawable/ic_email_green"
+                    android:drawablePadding="@dimen/small_margin"
+                    android:paddingVertical="@dimen/small_margin"
+                    android:paddingHorizontal="@dimen/large_margin" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <TextView
+                    android:id="@+id/view_faqs_tv"
+                    style="@style/BlackRegularText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/view_faqs_or_send_message"
+                    android:drawableLeft="@drawable/ic_help"
+                    android:drawablePadding="@dimen/tiny_margin"
+                    android:paddingTop="@dimen/tiny_margin"
+                    android:paddingHorizontal="@dimen/small_margin"
+                    android:gravity="center_vertical"/>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginLeft="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:text="@string/next"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

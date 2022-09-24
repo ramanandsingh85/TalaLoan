@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TalaLoan" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Theme.TalaLoan" parent="Base.Theme.TalaLoan" />
+
+
+    <style name="ToolbarTitleText">
+        <item name="android:textSize">@dimen/regular_plus_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BlackTitleText">
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="BlackRegularText">
+        <item name="android:textSize">@dimen/regular_text_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="OrangeRegularText">
+        <item name="android:textSize">@dimen/regular_text_size</item>
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
+    <style name="WhiteLargeText">
+        <item name="android:textSize">@dimen/largest_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WhiteRegularText">
+        <item name="android:textSize">@dimen/regular_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="GreenTitleText">
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="GreyRegularPlusText">
+        <item name="android:textSize">@dimen/regular_plus_text_size</item>
+        <item name="android:textColor">@color/darker_grey</item>
+    </style>
+</resources>
